@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aivenor is an independent research tool for reviewing publicly available Etsy marketplace listings." />
+  <meta name="color-scheme" content="light">
+  <title>Aivenor | Public Listing Research</title>
+  <style>
+    :root {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #202824;
+      background: #f3f6f3;
+      font-synthesis: none;
+      --ink: #202824;
+      --muted: #5c6962;
+      --green: #176348;
+      --green-dark: #124d39;
+      --orange: #bd542f;
+      --line: #d6dfd9;
+      --paper: #fff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; }
+    a { color: inherit; }
+    .topbar {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 max(28px, calc((100vw - 1120px) / 2));
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 750; }
+    .symbol { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 7px; background: var(--green); color: white; font-size: 15px; font-weight: 750; }
+    .top-note { color: var(--muted); font-size: 12px; }
+    main { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+    .intro { padding: 70px 0 62px; border-bottom: 1px solid var(--line); }
+    .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 17px; color: var(--green); font-size: 11px; line-height: 1.4; font-weight: 750; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--orange); }
+    h1 { max-width: 780px; margin: 0; font-size: 42px; line-height: 1.12; font-weight: 720; }
+    .lead { max-width: 710px; margin: 20px 0 0; color: var(--muted); font-size: 17px; line-height: 1.65; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
+    .badge { display: inline-flex; align-items: center; min-height: 28px; padding: 0 10px; border: 1px solid #c9d7ce; border-radius: 4px; background: #edf4ef; color: #315844; font-size: 11px; font-weight: 650; }
+    .band { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 42px; padding: 34px 0; border-bottom: 1px solid var(--line); }
+    .band h2 { margin: 3px 0 0; color: var(--green-dark); font-size: 14px; line-height: 1.4; font-weight: 750; }
+    .band-content { max-width: 740px; }
+    .band-content p { margin: 0; color: #3c4841; font-size: 14px; line-height: 1.75; }
+    .band-content p + p { margin-top: 12px; }
+    .details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 23px 0 0; }
+    .detail { padding-top: 12px; border-top: 2px solid var(--green); }
+    .detail h3 { margin: 0 0 7px; font-size: 12px; font-weight: 750; }
+    .detail p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .notice { margin: 28px 0 0; padding: 15px 17px; border-left: 3px solid var(--orange); background: #fff4ee; color: #623e30; font-size: 12px; line-height: 1.65; }
+    footer { max-width: 1120px; margin: 0 auto; padding: 22px 28px 34px; display: flex; justify-content: space-between; gap: 18px; color: #6a756f; font-size: 11px; line-height: 1.6; }
+    @media (max-width: 680px) {
+      .topbar { height: 58px; padding: 0 16px; }
+      .top-note { max-width: 140px; text-align: right; }
+      main { padding: 0 16px; }
+      .intro { padding: 48px 0 40px; }
+      h1 { font-size: 32px; }
+      .lead { font-size: 15px; }
+      .band { grid-template-columns: 1fr; gap: 11px; padding: 25px 0; }
+      .details { grid-template-columns: 1fr; gap: 15px; }
+      footer { padding: 18px 16px 26px; flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Aivenor home"><span class="symbol" aria-hidden="true">A</span><span>Aivenor</span></a>
+    <span class="top-note">Independent marketplace research tool</span>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow">Application overview</div>
+      <h1 id="page-title">Research public Etsy listings for product discovery.</h1>
+      <p class="lead">Aivenor helps its operators search publicly available Etsy marketplace listings and review product images, titles, prices, and listing links during product research.</p>
+      <div class="badges" aria-label="Application characteristics">
+        <span class="badge">Public listing data</span>
+        <span class="badge">Internal research use</span>
+        <span class="badge">No seller account access</span>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="purpose-title">
+      <h2 id="purpose-title">Purpose</h2>
+      <div class="band-content">
+        <p>The application provides a searchable view of active marketplace listings so a small research team can inspect existing products and decide which themes or product categories merit further evaluation.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="scope-title">
+      <h2 id="scope-title">Data and actions</h2>
+      <div class="band-content">
+        <p>The application requests public listing information, such as listing titles, product images, prices, and Etsy listing URLs. Search results are displayed to the operator with links back to their original Etsy pages.</p>
+        <div class="details">
+          <div class="detail">
+            <h3>Public marketplace data</h3>
+            <p>Used to review publicly visible listings and product presentation.</p>
+          </div>
+          <div class="detail">
+            <h3>Credential handling</h3>
+            <p>The Etsy API key is kept in server-side environment configuration and is not included in browser code.</p>
+          </div>
+          <div class="detail">
+            <h3>Application limits</h3>
+            <p>The tool does not create or edit listings, place orders, or access private seller account data.</p>
+          </div>
+        </div>
+        <div class="notice">This page is an informational overview for the application. It does not collect visitor accounts or API credentials.</div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="independence-title">
+      <h2 id="independence-title">Independent application</h2>
+      <div class="band-content">
+        <p>Aivenor is an independent application and is not affiliated with, endorsed by, or an official product of Etsy, Inc. Etsy is a trademark of Etsy, Inc.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>Aivenor · Application information</span>
+    <span>For use with the Etsy Open API, subject to Etsy’s API Terms of Use.</span>
+  </footer>
+</body>
+</html>
